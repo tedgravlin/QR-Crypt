@@ -9,6 +9,7 @@
     <!-- Page Title -->
     <title>QR-Crypt</title>
     <!-- Import QR Code Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 </head>
 
@@ -17,28 +18,44 @@
     <form>
         <input type="text" id="text" placeholder="Text"><br>
         <input type="text" id="password" placeholder="Password"><br>
-        <input type="button" id="submit" value="Generate" onclick="generateQRCode()"><br>
+        <input type="button" id="submit" value="Generate" onclick="handleInput()"><br>
     </form>
-    
+
     <canvas id="qrcode"></canvas>
 
     <!-- JavaScipt -->
     <script>
-        function generateQRCode() {
+        function handleInput() {
             // Get entered values
             var text = document.getElementById('text').value;
+            var key = document.getElementById('password').value;
 
+            encryptText(text, key);
+
+            // Encrypt text and generate QR code
+            generateQRCode(encryptText(text, key));
+        }
+
+        function encryptText(text, key) {
+            var encrypted = CryptoJS.AES.encrypt(text, key);
+            var unencrypted = CryptoJS.AES.decrypt(encrypted, key).toString(CryptoJS.enc.Utf8);
+            var URL = "index.html/#" + encrypted;
+
+            return URL;
+        }
+
+        function generateQRCode(URL) {
             var qrcode = new QRious({
-            element: document.getElementById("qrcode"),
-            background: '#ffffff',
-            backgroundAlpha: 1,
-            foreground: '#5868bf',
-            foregroundAlpha: 1,
-            level: 'H',
-            padding: 0,
-            size: 128,
-            value: text
-        });
+                element: document.getElementById("qrcode"),
+                background: '#ffffff',
+                backgroundAlpha: 1,
+                foreground: '#000000',
+                foregroundAlpha: 1,
+                level: 'H',
+                padding: 0,
+                size: 128,
+                value: URL
+            });
         }
     </script>
 </body>
