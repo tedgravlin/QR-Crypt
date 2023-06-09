@@ -1,3 +1,7 @@
 :root {
     text-align: center;
 }
+
+canvas {
+    padding: 1em 1em 1em 1em;
+}
