@@ -14,10 +14,17 @@
 </head>
 
 <body>
-    <h1>QR-Crypt</h1>
+    <div class="headerImage">
+        <div class="headerImageBlur">
+            <h1 class="header">QR-Crypt</h1>
+            <p class="description">Encrypted QR Codes.</p>
+        </div>
+    </div>
     <form>
-        <input type="text" id="password" placeholder="Password"><br>
-        <input type="button" id="submit" value="Decrypt" onclick="decryptText()"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <input class="generate" type="button" id="submit" value="Decrypt" onclick="decryptText()"><br>
+        <p id="error" class="error"></p>
+        <textarea readonly id="textOutput" class="output" rows="10" cols="50" placeholder="Text"></textarea><br>
     </form>
     <p id="decryptedText"></p>
 </body>

@@ -15,13 +15,16 @@
 </head>
 
 <body>
-    <h1>QR-Crypt</h1>
-    <form>
-        <input type="text" id="text" placeholder="Text"><br>
-        <input type="text" id="password" placeholder="Password"><br>
-        <input type="button" id="submit" value="Generate" onclick="handleInput()"><br>
-    </form>
-
+    <div class="headerImage">
+        <div class="headerImageBlur">
+            <h1 class="header">QR-Crypt</h1>
+            <p class="description">Encrypted QR Codes.</p>
+        </div>
+    </div>
+    <textarea id="textInput" class="input" rows="10" cols="50" placeholder="Text"></textarea><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <input type="button" class="generate" id="submit" value="Generate QR Code" onclick="handleInput()"><br>
+    <p id="error" class="error"></p>
     <div id="qrcodecontainer" class="qrcodecontainer">
         <canvas id="qrcode" class="qrcode"></canvas>
     </div>

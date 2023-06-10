@@ -29,6 +29,8 @@ function encryptText(text, key) {
 }
 
 function decryptText() {
+    const errorText = document.getElementById('error');
+
     // Get the current URL
     var currentURL = window.location.href;
     // Remove everything from the URL except for the encrypted message
@@ -37,12 +39,18 @@ function decryptText() {
     // Get the key from the user
     var key = document.getElementById('password').value;
 
+    if (!key) {
+        errorText.innerHTML = "You must enter a password!";
+        return;
+    }
+
     // Decrypt the message 
     var decryptedText = CryptoJS.AES.decrypt(encryptedMessage, key);
     decryptedText = decryptedText.toString(CryptoJS.enc.Utf8);
 
     // Display the decrypted message on the page
-    document.getElementById('decryptedText').innerHTML = decryptedText;
+    document.getElementById('textOutput').value = decryptedText;
+    document.getElementById('textOutput').style.visibility = "visible";
 }
 
 function generateQRCode(URL) {
@@ -51,7 +59,7 @@ function generateQRCode(URL) {
         element: document.getElementById("qrcode"),
         background: '#ffffff',
         backgroundAlpha: 0,
-        foreground: '#000000',
+        foreground: 'black',
         foregroundAlpha: 1,
         level: 'H',
         padding: null,
