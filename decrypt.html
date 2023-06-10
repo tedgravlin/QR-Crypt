@@ -7,22 +7,19 @@
     <!-- Scale page to display width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>Encrypt - QR-Crypt</title>
+    <title>Decrypt - QR-Crypt</title>
     <!-- Import Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script src="./scripts/main.js"></script>
 </head>
 
 <body>
     <h1>QR-Crypt</h1>
     <form>
-        <input type="text" id="text" placeholder="Text"><br>
         <input type="text" id="password" placeholder="Password"><br>
-        <input type="button" id="submit" value="Generate" onclick="handleInput()"><br>
+        <input type="button" id="submit" value="Decrypt" onclick="decryptText()"><br>
     </form>
-
-    <canvas id="qrcode"></canvas>
+    <p id="decryptedText"></p>
 </body>
 
 </html>
