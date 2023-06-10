@@ -9,7 +9,6 @@ function handleInput() {
 
 function encryptText(text, key) {
     var encrypted = CryptoJS.AES.encrypt(text, key);
-    alert("ENCRYPTED: " + encrypted);
     var URL = "./decrypt/#" + encrypted;
 
     return URL;
@@ -33,15 +32,20 @@ function decryptText() {
 }
 
 function generateQRCode(URL) {
+    const container = document.getElementById('qrcodecontainer');
     var qrcode = new QRious({
         element: document.getElementById("qrcode"),
         background: '#ffffff',
-        backgroundAlpha: 1,
+        backgroundAlpha: 0,
         foreground: '#000000',
         foregroundAlpha: 1,
         level: 'H',
-        padding: 0,
-        size: 128,
+        padding: null,
+        size: 500,
         value: URL
     });
+    // Unhide the div
+    document.getElementById('qrcodecontainer').style.visibility = "visible";
+    // Unhide the canvas
+    document.getElementById('qrcode').style.visibility = "visible";
 }
