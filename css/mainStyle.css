@@ -11,7 +11,7 @@ body {
 
 h1.header {
     color: greenyellow;
-    padding: 3em 0em 0em 0em;
+    padding: 2em 0em 0em 0em;
     margin: 0;
 }
 
@@ -22,6 +22,7 @@ p.description {
 
 p.error {
     color: red;
+    margin-bottom: 2px;
 }
 
 label {
