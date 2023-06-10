@@ -65,6 +65,7 @@ div.headerImageBlur {
         border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 div.qrcodecontainer {
