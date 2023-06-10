@@ -21,8 +21,8 @@
             <p class="description">Encrypted QR Codes.</p>
         </div>
     </div>
-    <textarea id="textInput" class="input" rows="10" cols="50" placeholder="Text"></textarea><br>
-    <input type="password" id="password" placeholder="Password"><br>
+    <textarea autocomplete="off" id="textInput" class="input" rows="5" cols="0" placeholder="Text"></textarea><br>
+    <input type="password" id="password" placeholder="Enter a password"><br>
     <input type="button" class="generate" id="submit" value="Generate QR Code" onclick="handleInput()"><br>
     <p id="error" class="error"></p>
     <div id="qrcodecontainer" class="qrcodecontainer">
