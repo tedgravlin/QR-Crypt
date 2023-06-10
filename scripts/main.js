@@ -59,7 +59,7 @@ function generateQRCode(URL) {
         element: document.getElementById("qrcode"),
         background: '#ffffff',
         backgroundAlpha: 0,
-        foreground: 'black',
+        foreground: 'greenyellow',
         foregroundAlpha: 1,
         level: 'H',
         padding: null,
@@ -67,7 +67,7 @@ function generateQRCode(URL) {
         value: URL
     });
     // Unhide the div
-    document.getElementById('qrcodecontainer').style.visibility = "visible";
+    document.getElementById('qrcodecontainer').style.display= "block";
     // Unhide the canvas
     document.getElementById('qrcode').style.visibility = "visible";
 }
