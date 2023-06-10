@@ -9,7 +9,7 @@ function handleInput() {
 
 function encryptText(text, key) {
     var encrypted = CryptoJS.AES.encrypt(text, key);
-    var URL = "./decrypt/#" + encrypted;
+    var URL = "https://tedgravlin.github.io/QR-Crypt/decrypt/#" + encrypted;
 
     return URL;
 }
