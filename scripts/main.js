@@ -1,7 +1,21 @@
+
 function handleInput() {
     // Get entered values
-    var text = document.getElementById('text').value;
+    var text = document.getElementById('textInput').value;
     var key = document.getElementById('password').value;
+    const errorText = document.getElementById('error');
+
+    if (!key) {
+        errorText.innerHTML = "You must enter a password!";
+        return;
+    }
+    else if (!text) {
+        errorText.innerHTML = "You must enter some text!";
+        return;
+    }
+    else {
+        errorText.innerHTML = "";
+    }
 
     // Encrypt text and generate QR code
     generateQRCode(encryptText(text, key));
