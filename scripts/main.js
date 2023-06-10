@@ -67,7 +67,16 @@ function generateQRCode(URL) {
         value: URL
     });
     // Unhide the div
-    document.getElementById('qrcodecontainer').style.display= "block";
+    document.getElementById('qrcodecontainer').style.display = "block";
     // Unhide the canvas
     document.getElementById('qrcode').style.visibility = "visible";
+    // Unhide the QR Code actions
+    document.getElementById('qrcodebuttons').style.visibility = "visible";
+}
+
+function downloadQRCode() {
+    const downloadLink = document.getElementById('downloadLink');
+    const QRCode = document.getElementById('qrcode');
+    downloadLink.setAttribute('download', 'QR-Crypt.png');
+    downloadLink.setAttribute('href', QRCode.toDataURL("image/png"));
 }
