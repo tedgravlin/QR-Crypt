@@ -59,7 +59,7 @@ function generateQRCode(URL) {
         element: document.getElementById("qrcode"),
         background: '#ffffff',
         backgroundAlpha: 0,
-        foreground: 'greenyellow',
+        foreground: '#7ed957',
         foregroundAlpha: 1,
         level: 'H',
         padding: null,
