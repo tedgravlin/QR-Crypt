@@ -15,27 +15,33 @@
 </head>
 
 <body>
-    <div class="headerImage">
-        <div class="headerImageBlur">
+    <div class="background-blur">
+        <div>
             <h1 class="header">QR-Crypt</h1>
-            <p class="description">Encrypted QR Codes.</p>
+            <p class="description">Password-protected QR Codes.</p>
+            </div>
         </div>
     </div>
-    <label for="textInput">Type in your message</label>
-    <textarea autocomplete="off" id="textInput" class="input" rows="5" cols="0" placeholder="Text"></textarea><br>
-    <label for="password">Create a password</label>
-    <input type="password" id="password" placeholder="Enter a password"><br>
-    <input type="button" class="generate" id="submit" value="Generate QR Code" onclick="handleInput()"><br>
-    <p id="error" class="error"></p>
-    <div id="qrcodecontainer" class="qrcodecontainer">
-        <canvas id="qrcode" class="qrcode"></canvas>
+    <div class="card">
+        <label for="textInput">Type in your message</label>
+        <textarea autocomplete="off" id="textInput" class="input" rows="5" cols="0" placeholder="Text"></textarea><br>
+        <label for="password">Create a password</label>
+        <input type="password" id="password" placeholder="Enter a password"><br>
+        <input type="button" class="generate" id="submit" value="Generate QR Code" onclick="handleInput()"><br>
+        <p id="error" class="error"></p>
+
+        <div id="qrcodecontainer" class="qrcodecontainer">
+            <canvas id="qrcode" class="qrcode"></canvas>
+        </div>
+    
+        <div id="qrcodebuttons" style="visibility:hidden">
+            <a href="" id="downloadLink">
+                <input type="button" class="qrcodeActionButton" onclick="downloadQRCode()" value="Download">
+            </a>
+        </div>
     </div>
 
-    <div id="qrcodebuttons" style="visibility:hidden">
-        <a href="" id="downloadLink">
-            <input type="button" class="qrcodeActionButton" onclick="downloadQRCode()" value="Download">
-        </a>
-    </div>
+    
 
 </body>
 

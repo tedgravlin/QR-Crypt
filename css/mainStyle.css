@@ -1,15 +1,25 @@
 :root {
     font-family: Arial, Helvetica, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
     text-align: center;
+    --main-color: #7ed957;
 }
+
+@font-face {
+    font-family: "silkin-sans";
+    src: url("../assets/fonts/SinkinSans-900XBlack.otf");
+  }
 
 body {
     margin: 0px 0px 0px 0px;
     box-sizing: border-box;
     background-color: black;
+    background-image: url(../assets/images/header-background.png);
 }
 
 h1.header {
+    font-family: silkin-sans;
     color: greenyellow;
     padding: 2em 0em 0em 0em;
     margin: 0;
@@ -31,50 +41,31 @@ label {
     font-weight: bold;
 }
 
-textarea.input {
-    text-align: center;
-    resize: none;
-    width: 75vw;
-    border: 2px greenyellow solid;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    background-color: black;
+/* Mobile view */
+@media (max-width: 500px) {
+    div.main-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+div.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 30vw;
     color: greenyellow;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 32px;
 }
 
-textarea.output {
-    visibility: hidden;
-    text-align: center;
-    resize: none;
-    width: 90vw;
-    border: 2px black solid;
-    border-radius: 16px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    background-color: greenyellow;
-    color: black;
-}
-
-/* Divs */
-div.headerImage {
-    background-color: black;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
-    background-image: url(../assets/images/header-background.png);
-}
-
-div.headerImageBlur {
-        border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+div.background-blur {
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(25px) brightness(70%);
+    -webkit-backdrop-filter: blur(25px) brightness(70%);
 }
 
 div.qrcodecontainer {
@@ -112,7 +103,42 @@ div.qrcodecontainer {
 
 }
 
-/* Inputs */
+/* Text */
+h1.title {
+    margin-bottom: 3em;
+}
+
+/* Inputs and Outputs */
+textarea.input {
+    text-align: center;
+    resize: none;
+    width: 90%;
+    border: 2px greenyellow solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    background-color: black;
+    color: greenyellow;
+}
+
+textarea.output {
+    visibility: hidden;
+    text-align: center;
+    resize: none;
+    width: 90%;
+    border: 2px black solid;
+    border-radius: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    background-color: greenyellow;
+    color: black;
+}
 input[type=text] {
     margin: 0.5em 0em 0.5em 0em;
     border: 2px black solid;
@@ -129,7 +155,18 @@ input[type=button] {
     border: 2px black solid;
     border-radius: 8px;
     text-align: center;
-    width: 90vw;
+    width: 90%;
+}
+
+input[type=password] {
+    padding: 4px 4px 4px 4px;
+    margin:  10px 0px 1em 0em;
+    width: 90%;
+    background-color: black;
+    color: greenyellow;
+    border: 2px greenyellow solid;
+    border-radius: 10px;
+    text-align: center;
 }
 
 input[type=button].qrcodeActionButton {
@@ -143,19 +180,6 @@ input[type=button].qrcodeActionButton {
     text-align: center;
     width: 25vw;
 }
-
-
-input[type=password] {
-    padding: 4px 4px 4px 4px;
-    margin:  10px 0px 1em 0em;
-    width: 75vw;
-    background-color: black;
-    color: greenyellow;
-    border: 2px greenyellow solid;
-    border-radius: 10px;
-    text-align: center;
-}
-
 
 canvas.qrcode {
     background-color: transparent;
