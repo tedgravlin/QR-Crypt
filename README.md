@@ -1,5 +1,5 @@
 # QR-Crypt
-An encrypted QR generator.
+A password-protected QR Code generator.
 Disclaimer: This is NOT intended for high-security applications. Work in progress.
 ---
 ## Credits
