@@ -59,7 +59,7 @@ div.card {
     color: var(--main-color);
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 32px;
-    padding: 2em;
+    padding: 1em 2em 2em 2em;
 }
 
 div.background-blur {
@@ -76,7 +76,7 @@ div.qrcodecontainer {
     height: min-content;
     overflow: hidden;
     position: relative;
-    margin: 4em auto 1em auto;
+    margin: 2em auto 3em auto;
     display: none;
     background-color:transparent;
     animation: growFromButton 1s ease-in;
@@ -109,6 +109,10 @@ div.qrcodecontainer {
 /* Text */
 h1.title {
     margin-bottom: 3em;
+}
+
+h2.card-title {
+    font-size: 2rem;
 }
 
 /* Inputs and Outputs */
@@ -171,20 +175,8 @@ input[type=password] {
     text-align: center;
 }
 
-input[type=button].qrcodeActionButton {
-    margin: 0.5em 0em 0.5em 0em;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    background-color: var(--main-color);
-    font-weight: bold;
-    color: black;
-    border: 2px black solid;
-    border-radius: 8px;
-    text-align: center;
-    width: 25vw;
-}
-
 canvas.qrcode {
     background-color: transparent;
     visibility: hidden;
-    width: 15vw;
+    width: 20vw;
 }
