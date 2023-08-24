@@ -80,26 +80,17 @@ div.qrcodecontainer {
     margin: 2em auto 3em auto;
     display: none;
     background-color:transparent;
-    animation: growFromButton 1s ease-in;
+    animation: growFromCenter 0.75s ease-in;
 }
 
-@keyframes growFromButton {
-    0% { 
-        top: -10em;  
-        scale: 10%;
-        background-color: var(--main-color);
-        border-radius: 50%;
-    }
-
-    50% {
-        top: 0em;
+@keyframes growFromCenter {
+    0% {   
         scale: 10%;
         background-color: var(--main-color);
         border-radius: 50%;
     }
 
     100% {
-        top: 0em;
         scale: 100%;
         background-color: transparent;
         border-radius: 0%;
