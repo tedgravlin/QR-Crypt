@@ -17,6 +17,10 @@ function handleInput() {
         errorText.innerHTML = "";
     }
 
+    // Get and hide the input panel div
+    const inputPanel = document.getElementById('input-panel');
+    inputPanel.style.display = "none";
+
     // Encrypt text and generate QR code
     generateQRCode(encryptText(text, key));
 }

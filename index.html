@@ -23,19 +23,21 @@
         </div>
     </div>
     <div class="card">
-        <h2>Create a QR Code</h2>
-        <label for="textInput">Message</label>
-        <textarea autocomplete="off" id="textInput" class="input" rows="5" cols="0" placeholder="Text"></textarea><br>
-        <label for="password">Create a password</label>
-        <input type="password" id="password" placeholder="Enter a password"><br>
-        <input type="button" id="submit" value="Generate" onclick="handleInput()"><br>
-        <p id="error" class="error"></p>
+        <div id="input-panel">
+            <h2>Create a QR Code</h2>
+            <label for="textInput">Message</label>
+            <textarea autocomplete="off" id="textInput" class="input" rows="5" cols="0" placeholder="Text"></textarea><br>
+            <label for="password">Create a password</label>
+            <input type="password" id="password" placeholder="Enter a password"><br>
+            <input type="button" id="submit" value="Generate" onclick="handleInput()"><br>
+            <p id="error" class="error"></p>  
+        </div>
 
         <div id="qrcodecontainer" class="qrcodecontainer">
             <canvas id="qrcode" class="qrcode"></canvas>
         </div>
     
-        <div id="qrcodebuttons" style="display:none">
+        <div id="qrcodebuttons" style="visibility: hidden;">
             <a href="" id="downloadLink">
                 <input type="button" class="qrcodeActionButton" onclick="downloadQRCode()" value="Download">
             </a>

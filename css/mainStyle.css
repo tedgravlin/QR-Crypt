@@ -186,5 +186,5 @@ input[type=button].qrcodeActionButton {
 canvas.qrcode {
     background-color: transparent;
     visibility: hidden;
-    width: 50vw;
+    width: 15vw;
 }
