@@ -115,6 +115,10 @@ textarea.input {
     color: var(--main-color);
 }
 
+textarea.input:focus,  input[type=password]:focus {
+    outline: 2px solid var(--main-color);
+}
+
 textarea.output {
     visibility: hidden;
     text-align: center;
