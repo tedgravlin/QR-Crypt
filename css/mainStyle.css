@@ -9,7 +9,7 @@
 @font-face {
     font-family: "silkin-sans";
     src: url("../assets/fonts/SinkinSans-900XBlack.otf");
-  }
+}
 
 body {
     margin: 0px 0px 0px 0px;
@@ -22,6 +22,7 @@ div.header {
     padding: 1em 0 4em 0;
 }
 
+/* Text */
 h1.site-title {
     font-size: 4em;
     font-family: silkin-sans;
@@ -34,6 +35,14 @@ p.site-description {
     margin: 0;
 }
 
+h1.title {
+    margin-bottom: 3em;
+}
+
+h2.card-title {
+    font-size: 2rem;
+}
+
 p.error {
     color: red;
     margin-bottom: 2px;
@@ -43,14 +52,6 @@ label {
     color: var(--main-color);
     display: block;
     font-weight: bold;
-}
-
-/* Mobile view */
-@media (max-width: 500px) {
-    div.main-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
 }
 
 div.card {
@@ -104,15 +105,6 @@ div.qrcodecontainer {
         border-radius: 0%;
     }
 
-}
-
-/* Text */
-h1.title {
-    margin-bottom: 3em;
-}
-
-h2.card-title {
-    font-size: 2rem;
 }
 
 /* Inputs and Outputs */
@@ -179,4 +171,31 @@ canvas.qrcode {
     background-color: transparent;
     visibility: hidden;
     width: 20vw;
+}
+
+/* Mobile view */
+@media (max-width: 500px) {
+    h1.site-title {
+        font-size: 3em;
+    }
+
+    div.card {
+        width: 70vw;
+    }
+
+    div.header {
+        padding-top: 2em;
+    }
+
+    canvas.qrcode {
+        width: 60vw;
+    }
+
+    h2.card-title {
+        font-size: 1.5rem;
+    }
+
+    textarea.input, input[type=password] {
+        width: 80%;
+    }
 }
