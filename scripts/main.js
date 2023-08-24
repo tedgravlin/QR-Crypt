@@ -17,6 +17,10 @@ function handleInput() {
         errorText.innerHTML = "";
     }
 
+    // Get and hide the input panel div
+    const inputPanel = document.getElementById('input-panel');
+    inputPanel.style.display = "none";
+
     // Encrypt text and generate QR code
     generateQRCode(encryptText(text, key));
 }
@@ -59,7 +63,7 @@ function generateQRCode(URL) {
         element: document.getElementById("qrcode"),
         background: '#ffffff',
         backgroundAlpha: 0,
-        foreground: 'greenyellow',
+        foreground: '#7ed957',
         foregroundAlpha: 1,
         level: 'H',
         padding: null,
@@ -71,7 +75,7 @@ function generateQRCode(URL) {
     // Unhide the canvas
     document.getElementById('qrcode').style.visibility = "visible";
     // Unhide the QR Code actions
-    document.getElementById('qrcodebuttons').style.visibility = "visible";
+    document.getElementById('qrcodebuttons').style.display = "block";
 }
 
 function downloadQRCode() {
