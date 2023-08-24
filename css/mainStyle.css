@@ -14,20 +14,24 @@
 body {
     margin: 0px 0px 0px 0px;
     box-sizing: border-box;
-    background-color: black;
     background-image: url(../assets/images/header-background.png);
 }
 
-h1.header {
-    font-family: silkin-sans;
+div.header {
     color: var(--main-color);
-    padding: 2em 0em 0em 0em;
-    margin: 0;
+    padding: 1em 0 4em 0;
 }
 
-p.description {
+h1.site-title {
+    font-size: 4em;
+    font-family: silkin-sans;
+    margin: 0 0 -10px 0;
+}
+
+p.site-description {
+    font-weight: bold;
     color: var(--main-color);
-    padding: 1em 0em 2em 0em;
+    margin: 0;
 }
 
 p.error {
@@ -50,18 +54,17 @@ label {
 }
 
 div.card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     margin: auto;
     width: 30vw;
     color: var(--main-color);
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 32px;
+    padding: 2em;
 }
 
 div.background-blur {
+    position: fixed;
+    z-index: -1;
     height: 100vh;
     width: 100vw;
     backdrop-filter: blur(25px) brightness(70%);
@@ -112,11 +115,11 @@ h1.title {
 textarea.input {
     text-align: center;
     resize: none;
-    width: 90%;
+    width: 70%;
     border: 2px var(--main-color) solid;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 24px;
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
@@ -148,24 +151,23 @@ input[type=text] {
 
 input[type=button] {
     margin: 0.5em 0em 0.5em 0em;
-    padding: 1em 1em 1em 1em;
+    padding: 1em 2em 1em 2em;
     background-color: var(--main-color);
     font-weight: bold;
     color: black;
     border: 2px black solid;
-    border-radius: 8px;
+    border-radius: 24px;
     text-align: center;
-    width: 90%;
 }
 
 input[type=password] {
-    padding: 4px 4px 4px 4px;
+    padding: 0.5em 0em 0.5em 0em;
     margin:  10px 0px 1em 0em;
-    width: 90%;
+    width: 70%;
     background-color: black;
     color: var(--main-color);
     border: 2px var(--main-color) solid;
-    border-radius: 10px;
+    border-radius: 16px;
     text-align: center;
 }
 
