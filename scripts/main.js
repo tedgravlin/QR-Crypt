@@ -75,7 +75,7 @@ function generateQRCode(URL) {
     // Unhide the canvas
     document.getElementById('qrcode').style.visibility = "visible";
     // Unhide the QR Code actions
-    document.getElementById('qrcodebuttons').style.visibility = "visible";
+    document.getElementById('qrcodebuttons').style.display = "block";
 }
 
 function downloadQRCode() {
